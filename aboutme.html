@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>About Me</title>
+	<link rel="shortcut icon" type="image/png" href="images/s-arrow-logo.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #1D212B;
+	color:#fff;
+	font-family: Poppins, sans-serif;
+	animation: transitionIn 0.5s;
+}
+
+@keyframes transitionIn{
+	from{
+		opacity:0;
+		transform: translateY(-10px);
+	}
+	to{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.nav ul{
+	list-style: none;
+	background-color: #D46A6A; 
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+.nav li{
+	display: inline-block;
+}
+
+.nav a{
+	text-decoration: none;
+	color: #fff;
+	width: 100px;
+	display:block;
+	padding: 16px;
+	font-size: 20px;
+	font-family: helvetica;
+	transition:0.5s;
+}
+
+.box{
+	text-decoration: none;
+	color:#fff;
+	background: none;
+	padding:20px 60px;
+	border-radius: 10px;
+	font-weight: bold;
+	transition: all 0.5s ease-in-out;
+	border: 1px;
+	margin: 0 10px;
+}
+
+.box:hover{
+	border:0;
+	box-shadow: 0 0 5px #ffe205,0 0 10px #ffe205,0 0 20px #edd205;
+}
+
+.content{
+	color: #fbfcfd;
+	position: absolute;
+	top:50%;
+	left:8%;
+	transform: translateY(-50%);
+	z-index: 2;
+}
+
+h1{
+	font-size: 80px;
+	margin:10 0 30px;
+	line-height: 80px;
+}
+
+a{
+  	color: #fff;
+ 	text-decoration: none;
+}
+</style>
+</head>
+<body>
+
+	<div class="nav">
+    	<ul>
+     		<li><a href="index.html" class="box">Home</a></li>
+      		<li><a href="aboutme.html" class="box">About Me</a></li>
+      		<li><a href="quotes.html" class="box">Quotes</a></li>
+      		<li><a href="gallery.html" class="box">Gallery</a></li> 
+      		<li><a href="contact.html" class="box">Contact</a></li>
+      		<li><a href="others.html" class="box">Others</a></li>
+    	</ul>
+	</div>
+	
+	<!--First division-->
+	<div id="firstdivision" style="background-image: url('images/aboutme.jpg');background-size:cover;height: 480px;padding-top: 80px;">
+		<div class="content">
+			<p style="font-size: 40px;">A little Brief</p>
+			<h1>About Me</h1>
+		</div>
+	</div>
+
+	<!--Second division-->
+	<img src="images/mypic.jpg" style="height: 600px;margin:100px;float: left;/">
+		<div id="seconddivision" style="height: 600px;margin: 100px; text-align: justify;">
+			<h1 style="	font-size: 60px">Assalamualaikum</h1>
+			<p style="line-height: 2.0;font-size: 20px;">Hello! my name is Nur Syafiqah binti Murat from IM1105E. I am a final year student from the Information Management faculty in UiTM Rembau Campus which is situated in Pilin, Negeri Sembilan. The purpose of this website is to fulfil my assignment of IMD311 subject which is, the Introduction To Web Content Management & Design. I am currently 20 years old now and planning to further my studies in degree within the same field. For five semesters, I have been active with so many clubs and activities that are held in UiTM. My additional skills are swimming for sport, taekwondo and silat for martial arts. In my family, I am considered the eldest one even though I am twins, yes the only one twins in the family.</p>
+		</div>
+		
+	<!--Third division-->
+	<img src="images/mypic2.jpg" style="height: 600px;margin:100px;float: right;/">
+	<br>
+		<div id="thirddivision" style="height: 600px;margin: 100px;">
+			<h1 style="font-size: 40px">PERSONAL DETAILS</h1>
+			<p style="line-height: 2.0;font-size: 20px;">Full Name: Nur Syafiqah binti Murat<br>Date of Birth: 11:59 a.m, Thursday, 19 February 1998<br>Birth of Place: Hospital Mawar, Selangor<br>Height: 158cm<br>Weight: 64kg<br></p>
+			<h2 style="font-size: 25px;	line-height: 40px">EDUCATIONAL BACKGROUND</h1>
+			<p style="line-height: 2.0;font-size: 20px;">Universiti Teknologi Mara, Rembau Campus (June 2018-)<br>Kolej Tingkatan Enam Shah Alam (June 2016-Dec 2017)<br>Sekolah Menengah Kebangsaan Seksyen 19 (2011-2015)<br>Sekolah Kebangsaan Seksyen 20 (2005-2010)
+		</div>
+
+	<!--Fourth division-->
+	<div id="fourthdivision" style="text-align: center;">
+		<h1 style="font-size: 40px;"> Some of My Favourite Music</h1>
+	<iframe src="https://www.youtube.com/embed/Bh1398ddGDw?controls=0"></iframe>
+	<iframe src="https://www.youtube.com/embed/UOxkGD8qRB4?controls=0"></iframe>
+	<iframe src="https://www.youtube.com/embed/CYDP_8UTAus?controls=0"></iframe>
+	<p style="line-height: 2.0;font-size: 20px;"><a href="#firstdivision"><strong>Top of page</strong></a></p>
+	</div>
+</html>

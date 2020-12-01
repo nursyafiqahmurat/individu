@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" type="text/css" href="styles2.css">
+    <link rel="shortcut icon" type="image/png" href="images/s-arrow-logo.png">
+</head>
+<body>
+	 <div class="nav">
+    	<ul>
+          <li><a href="index.html" class="box">Home</a></li>
+          <li><a href="aboutme.html" class="box">About Me</a></li>
+      		<li><a href="quotes.html" class="box">Quotes</a></li>
+      		<li><a href="gallery.html" class="box">Gallery</a></li> 
+      		<li><a href="contact.html" class="box">Contact</a></li>
+      		<li><a href="others.html" class="box">Others</a></li>
+    	</ul>
+	 </div>
+	
+    <!--First division-->
+	   <div id="firstdivision" style="background-image: url('images/igor-miske-oLhTLD-RBsc-unsplash.jpg');background-size:cover;height: 480px;padding-top: 80px;">
+		    <div class="content">
+          <br>
+          <br>
+          <h1>Gallery</h1>
+          <P>A Collection<br>of High Quality<br>and non<br>copyrighted<br>images</P>
+		    </div>
+	   </div>
+    <br>
+    <br>
+    <h2>Here are some of the wonderful collections that you can enjoy</h2>
+
+  <!-- Second Division -->
+	 <div id="seconddivision">
+    	<div class="img-slider">
+      		<div class="slide active">
+        		<img src="images/river.jpg" alt="">
+       	 			<div class="info"></div>
+      		</div>
+      		<div class="slide">
+        		<img src="images/fjord.jpg" alt="">
+        			<div class="info"></div>
+      		</div>
+      		<div class="slide">
+        		<img src="images/mountain.jpg" alt="">
+        			<div class="info"></div>
+     		 </div>
+      		<div class="slide">
+        		<img src="images/road.jpg" alt="">
+        			<div class="info"></div>
+      		</div>
+      		<div class="slide">
+        		<img src="images/waterfalls.jpg" alt="">
+        			<div class="info"></div>
+      		</div>
+
+      		<div class="navigation">
+        	<div class="btn active"></div>
+        	<div class="btn"></div>
+        	<div class="btn"></div>
+        	<div class="btn"></div>
+        	<div class="btn"></div>
+      		</div>
+    	</div>
+	 </div>
+
+  <!-- Third division -->
+  <div id="thirddivision">
+		  <a href="images/alex-shaw.jpg"><img src="images/alex-shaw-small.jpg" alt="girl warmupt"></a>
+		  <a href="images/buildings.jpg"><img src="images/buildings-small.jpg" alt="night building"></a>
+		  <a href="images/geert-pieters.jpg"><img src="images/geert-pieters-small.jpg" alt="girl workout"></a>
+		  <a href="images/cathy-pham.jpg"><img src="images/cathy-pham-small.jpg" alt="girl with dumbell"></a>
+		  <a href="images/chicago.jpg"><img src="images/chicago-small.jpg" alt="chicago city"></a>
+		  <a href="images/clark-tibbs.jpg"><img src="images/clark-tibbs-small.jpg" alt="do something great"></a>
+		  <a href="images/hamburg.jpg"><img src="images/hamburg-small.jpg" alt="hamburg building"></a>
+		  <a href="images/patrick-tomasso.jpg"><img src="images/patrick-tomasso-small.jpg" alt="books"></a>
+		  <a href="images/horses.jpg"><img src="images/horses-small.jpg" alt="horses in farm"></a>
+		  <a href="images/landscape.jpg"><img src="images/landscape-small.jpg" alt="landscape"></a>
+		  <a href="images/luis-vidal.jpg"><img src="images/luis-vidal-small.jpg" alt="gym"></a>
+		  <a href="images/john-arano.jpg"><img src="images/john-arano-small.jpg" alt="girl with barbell"></a>
+      <a href="images/karsten.jpg"><img src="images/karsten-small.jpg" alt="men with rope"></a>
+		  <a href="images/shane-rounce.jpg"><img src="images/shane-rounce-small.jpg" alt="river"></a>
+		  <a href="images/todd-quackenbush.jpg"><img src="images/todd-quackenbush-small.jpg" alt="food"></a>
+		  <a href="images/path.jpg"><img src="images/path-small.jpg" alt="path"></a>
+		  <a href="images/tyler-casey.jpg"><img src="images/tyler-casey-small.jpg" alt="waves"></a>
+		  <a href="images/victor-freitas.jpg"><img src="images/victor-freitas-small.jpg" alt="barbell"></a>
+		  <a href="images/xunsplash.jpg"><img src="images/xunsplash-small.jpg" alt="climbing"></a>
+		  <a href="images/robert-lukeman.jpg"><img src="images/robert-lukeman-small.jpg" alt="purple scenery"></a>
+  </div>
+      <p style="line-height: 2.0;font-size: 20px;text-align: center;"><a href="#firstdivision"><strong>Top of page</strong></a></p>
+      
+	      <script type="text/javascript">
+    var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.btn');
+    let currentSlide = 1;
+
+    // Javascript for image slider manual navigation
+    var manualNav = function(manual){
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+
+        btns.forEach((btn) => {
+          btn.classList.remove('active');
+        });
+      });
+
+      slides[manual].classList.add('active');
+      btns[manual].classList.add('active');
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        manualNav(i);
+        currentSlide = i;
+      });
+    });
+
+    // Javascript for image slider autoplay navigation
+    var repeat = function(activeClass){
+      let active = document.getElementsByClassName('active');
+      let i = 1;
+
+      var repeater = () => {
+        setTimeout(function(){
+          [...active].forEach((activeSlide) => {
+            activeSlide.classList.remove('active');
+          });
+
+        slides[i].classList.add('active');
+        btns[i].classList.add('active');
+        i++;
+
+        if(slides.length == i){
+          i = 0;
+        }
+        if(i >= slides.length){
+          return;
+        }
+        repeater();
+      }, 10000);
+      }
+      repeater();
+    }
+    repeat();
+    </script>
+</body>
+</html>
